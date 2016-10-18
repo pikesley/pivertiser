@@ -4,7 +4,7 @@
   <% PI_RACK.each_pair do |name, ip| %>
     <tr>
       <td><%= name %></td>
-      <td><%= ip %></td>
+      <td><%= ip.gsub '-', '.' %></td>
     </tr>
   <% end %>
 </table>

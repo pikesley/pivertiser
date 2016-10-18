@@ -19,7 +19,7 @@ module Pivertiser
 
       respond_to do |wants|
         wants.html do
-          @content = '<h1>Raspis we know about</h1>'
+          @content = "<h1>Raspis we've heard from recently</h1>"
           @title = 'Pivertiser'
           @github_url = CONFIG['github_url']
           erb :index, layout: :default

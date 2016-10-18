@@ -1,0 +1,10 @@
+<%= @content %>
+
+<table class='table'>
+  <% PI_RACK.each_pair do |name, ip| %>
+    <tr>
+      <td><%= name %></td>
+      <td><%= ip %></td>
+    </tr>
+  <% end %>
+</table>

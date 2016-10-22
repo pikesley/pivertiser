@@ -5,7 +5,7 @@ module Pivertiser
     it 'says hello' do
       get '/'
       expect(last_response).to be_ok
-      expect(last_response.body).to match /Raspis we know about/
+      expect(last_response.body).to match /Raspis we've heard from recently/
     end
 
     it 'serves JSON' do

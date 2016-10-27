@@ -3,7 +3,7 @@
 <table class='table'>
   <% PI_RACK.each_pair do |name, data| %>
     <tr>
-      <td><%= data[1] %></td>
+      <td><%= data[1] %> UTC</td>
       <td><%= name %></td>
       <td><%= data[0].gsub '-', '.' %></td>
     </tr>

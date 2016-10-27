@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'tilt/erubis'
 require 'json'
 require 'yaml'
+require 'date'
 
 require_relative 'pivertiser/helpers'
 require_relative 'pivertiser/racks'
@@ -34,7 +35,10 @@ module Pivertiser
     end
 
     get '/:pi_name/:pi_ip' do
-      PI_RACK[params[:pi_name]] = params[:pi_ip]
+      PI_RACK[params[:pi_name]] = [
+        params[:pi_ip],
+        DateTime.now.strftime('%Y-%m-%d %H:%M:%S')
+      ]
     end
 
     # start the server if ruby file executed directly
